@@ -1,5 +1,5 @@
 const express = require('express');
-const {verificaToken} = require('../middlewares/autenticacion');
+const { verificaToken } = require('../middlewares/autenticacion');
 const app = express();
 let Producto = require('../models/producto');
 
@@ -29,8 +29,8 @@ app.get('/producto', verificaToken, (req, res) => {
 			res.json({
 				ok: true,
 				productos
-			})
-		})
+			});
+		});
 });
 
 //======================================
